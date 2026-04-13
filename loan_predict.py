@@ -422,48 +422,57 @@ class LoanDataManager:
 
 if __name__ == "__main__":
     manager = LoanDataManager("train_csv.csv")
+    
+    # 1. 데이터 준비
     manager.load_csv()
     manager.handle_missing_values()
+    
+    # 2. DB 저장 및 조회
     manager.connect_db()
     manager.create_table()
     manager.insert_data()
     manager.check_row_count()
     manager.load_from_db()
-
-    # manager.plot_basic_distributions()
-    # manager.plot_categorical_distributions()
-    # manager.plot_categorical_vs_loan_status()
-    # manager.plot_numeric_boxplots_by_loan_status()
-    # manager.plot_scatter_selected()
-    # manager.plot_correlation_heatmap()
-
+    
+    # 3. 시각화
+    manager.plot_basic_distributions()
+    manager.plot_categorical_distributions()
+    manager.plot_categorical_vs_loan_status()
+    manager.plot_numeric_boxplots_by_loan_status()
+    manager.plot_scatter_selected()
+    manager.plot_correlation_heatmap()
+    
+    # 4. 모델링 전처리 및 분할
     manager.preprocess_for_model()
     manager.split_train_test()
-
-    # manager.train_and_test_lr_model()
-    # manager.evaluate_classification_performance()
-
-    # manager.train_and_test_knn_model()
-    # manager.evaluate_classification_performance()
-
+    
+    # 5. 모델 비교
+    manager.train_and_test_lr_model()
+    manager.evaluate_classification_performance()
+    
+    manager.train_and_test_knn_model()
+    manager.evaluate_classification_performance()
+    
     manager.train_and_test_svm_model()
     manager.evaluate_classification_performance()
     manager.plot_confusion_matrix(title="SVM Confusion Matrix (Before Scaling)")
-
-    # manager.lr_kfold_performance()
-    # manager.knn_kfold_performance()
-    # manager.svm_kfold_performance()
-
+    
+    # 6. K-Fold
+    manager.lr_kfold_performance()
+    manager.knn_kfold_performance()
+    manager.svm_kfold_performance()
+    
+    # 7. Scaling 비교
     manager.apply_standard_scaling()
-
-    # manager.train_and_test_lr_model_scaled()
-    # manager.evaluate_classification_performance()
-
-    # manager.train_and_test_knn_model_scaled()
-    # manager.evaluate_classification_performance()
-
+    
+    manager.train_and_test_lr_model_scaled()
+    manager.evaluate_classification_performance()
+    
+    manager.train_and_test_knn_model_scaled()
+    manager.evaluate_classification_performance()
+    
     manager.train_and_test_svm_model_scaled()
     manager.evaluate_classification_performance()
-    manager.plot_confusion_matrix(title="SVM Confusion Matrix (Before Scaling)")
-
+    manager.plot_confusion_matrix(title="SVM Confusion Matrix (After Scaling)")
+    
     manager.close()
