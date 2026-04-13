@@ -5,6 +5,11 @@
 데이터 로드, 결측치 처리, DB 적재/조회, 시각화, 전처리, 모델 비교를 수행했습니다.
 
 ## 2. Dataset
+This project uses the public Loan Prediction dataset.
+
+- Source: Analytics Vidhya / Kaggle public mirror
+- Please download the dataset manually and place it in the project directory as `train_csv.csv`.
+- https://www.kaggle.com/datasets/shaijudatascience/loan-prediction-practice-av-competition?resource=download
 - Loan_ID
 - Gender
 - Married
