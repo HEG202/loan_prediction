@@ -53,21 +53,24 @@ This project uses the public Loan Prediction dataset.
 - SVM
 
 ## 7. Results
-train/test split
-| Model               | Scaling | Accuracy | Precision | Recall | F1-score |
-| ------------------- | ------- | -------: | --------: | -----: | -------: |
-| Logistic Regression | No      |   0.6703 |    0.6746 | 0.9500 |   0.7889 |
-| KNN                 | No      |   0.5622 |    0.6275 | 0.8000 |   0.7033 |
-| SVM                 | No      |   0.6486 |    0.6486 | 1.0000 |   0.7869 |
-| Logistic Regression | Yes     |   0.6703 |    0.6746 | 0.9500 |   0.7889 |
-| KNN                 | Yes     |   0.6649 |    0.6959 | 0.8583 |   0.7687 |
-| SVM                 | Yes     |   0.7622 |    0.7533 | 0.9417 |   0.8370 |
-K-fold
-| Model               | Accuracy | Precision | Recall | F1-score |
-| ------------------- | -------: | --------: | -----: | -------: |
-| Logistic Regression |   0.6906 |    0.7166 | 0.9131 |   0.8018 |
-| KNN                 |   0.6222 |    0.6853 | 0.8340 |   0.7516 |
-| SVM                 |   0.6841 |    0.6864 | 0.9954 |   0.8121 |
+### Train/Test Split Results
+
+| Model | Scaling | Accuracy | Precision | Recall | F1-score |
+|---|---|---:|---:|---:|---:|
+| Logistic Regression | No | 0.6703 | 0.6746 | 0.9500 | 0.7889 |
+| KNN | No | 0.5622 | 0.6275 | 0.8000 | 0.7033 |
+| SVM | No | 0.6486 | 0.6486 | 1.0000 | 0.7869 |
+| Logistic Regression | Yes | 0.6703 | 0.6746 | 0.9500 | 0.7889 |
+| KNN | Yes | 0.6649 | 0.6959 | 0.8583 | 0.7687 |
+| SVM | Yes | 0.7622 | 0.7533 | 0.9417 | 0.8370 |
+
+### K-Fold Cross Validation Results
+
+| Model | Accuracy | Precision | Recall | F1-score |
+|---|---:|---:|---:|---:|
+| Logistic Regression | 0.6906 | 0.7166 | 0.9131 | 0.8018 |
+| KNN | 0.6222 | 0.6853 | 0.8340 | 0.7516 |
+| SVM | 0.6841 | 0.6864 | 0.9954 | 0.8121 |
 
 ## 8. Key Findings
 - Credit_History가 승인 여부와 가장 관련성이 커 보였다.
