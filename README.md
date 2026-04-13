@@ -7,9 +7,11 @@
 ## 2. Dataset
 This project uses the public Loan Prediction dataset.
 
-- Source: Analytics Vidhya / Kaggle public mirror
+- Source: [Kaggle Loan Prediction Dataset](https://www.kaggle.com/datasets/shaijudatascience/loan-prediction-practice-av-competition)
+- Original context: Analytics Vidhya practice problem
 - Please download the dataset manually and place it in the project directory as `train_csv.csv`.
-- https://www.kaggle.com/datasets/shaijudatascience/loan-prediction-practice-av-competition?resource=download
+
+### Features
 - Loan_ID
 - Gender
 - Married
