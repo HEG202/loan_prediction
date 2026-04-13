@@ -5,7 +5,7 @@ def open_db():
     conn = pymysql.connect(
         host="localhost",
         user="root",
-        password="230223",
+        password="your_password",
         database="loan_db",
         charset="utf8mb4"
     )
